@@ -1,6 +1,33 @@
 use std::io;
 
 fn main() {
+    
+} 
+
+fn l() {
+    let mut s = String::from("Hi bitch!");
+    chacnge_str(&mut s);
+    let count_s = calculate_len(&s);
+    println!("{}\ncount symbols is {}", s, count_s);
+}
+
+fn chacnge_str(s: &mut String) {
+    s.push_str(" Some add to back side string");
+}
+
+fn test_links() {
+    let s1 = String::from("Sup");
+    let lens = calculate_len(&s1);
+
+    println!("len of {}, is {}", s1, lens);
+}
+
+fn calculate_len(s: &String) -> usize {
+    s.len()
+}
+
+
+fn test_nums() {
     let mut inp_val_1 = String::new();
     let mut inp_val_2: String = String::new();
 
@@ -16,4 +43,4 @@ fn main() {
     let result = data1 + data2;
 
     println!("View:\nn1 = {}, n2 = {};\nn1 + n2 = {}", data1, data2, result);
-} 
+}

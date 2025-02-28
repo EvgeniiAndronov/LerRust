@@ -1,46 +1,127 @@
-use std::io;
+// use std::io;
 
 fn main() {
-    
+    add(4, 2);
+    add(3, -23);
+
+    let user = "Name";
+    greet_user(&user);
 } 
 
-fn l() {
-    let mut s = String::from("Hi bitch!");
-    chacnge_str(&mut s);
-    let count_s = calculate_len(&s);
-    println!("{}\ncount symbols is {}", s, count_s);
+fn greet_user(name: &str) {
+    println!("name: {}", name);
 }
 
-fn chacnge_str(s: &mut String) {
-    s.push_str(" Some add to back side string");
+fn add(a: i32, b:i32) {
+    let res = a + b;
+    println!("add-{}", res);
 }
 
-fn test_links() {
-    let s1 = String::from("Sup");
-    let lens = calculate_len(&s1);
+// fn loops() {
+//     for i in 1..4 {
+//         println!("f-1-{}", i);
+//     }
 
-    println!("len of {}, is {}", s1, lens);
-}
+//     for i in (1..4).rev() {
+//         println!("f-2-{}", i);
+//     }
 
-fn calculate_len(s: &String) -> usize {
-    s.len()
-}
+//     for i in (1..4).step_by(2) {
+//         println!("f-3-{}", i);
+//     }
+
+//     let mut num = 3;
+
+//     while num > 0 {
+//         println!("w-1-{}", num);
+//         num -= 1;    
+//     }
+
+//     for i in 1..20 {
+//         if i % 2 == 0{continue;}
+//         if i > 7 {break;}
+//         println!("f-4-{}", i);
+//     }
+
+//     let mut count = 0;
+
+//     loop {
+//         count += 1;
+//         println!("l-1-{}", count);
+
+//         if count == 5 {
+//             break;
+//         }
+//     }
+
+//     let array = [1, 2, 3, 4, 5, 6, 7, 8];
+//     for el in array {
+//         println!("f-5-{}", el);
+//     }
+
+// }
 
 
-fn test_nums() {
-    let mut inp_val_1 = String::new();
-    let mut inp_val_2: String = String::new();
 
-    println!("Enter num1: ");
-    io::stdin().read_line(&mut inp_val_1).expect("val 1");
+// fn ifs() {
+//     let a: u8 = 10;
+//     let b: u8 = 11;
+//     let c: u8 = 9;
 
-    println!("Enter num2: ");
-    io::stdin().read_line(&mut inp_val_2).expect("val 2");
+//     if a < b && b < c {
+//         println!("a = {}, b = {}", a, b);
+//     } else if a < c || c < b {
+//         println!("else if a < c, a = {}, c = {}", a, c);
+//     } else {
+//         println!("else");
+//     }
+//     let a = if a > b {0} else {1};
+//     println!("{}", a);
 
-    let data1: i16 = inp_val_1.trim().parse().expect("not valid number");
-    let data2: i16 = inp_val_2.trim().parse().expect("not correct val");
+//     match a {
+//         1 => l(),
+//         0 => println!("a = 0"),
+//         _ =>println!("not 1, not 0"),
+//     }
+// }
 
-    let result = data1 + data2;
+// fn l() {
+//     let mut s = String::from("Hi bitch!");
+//     chacnge_str(&mut s);
+//     let count_s = calculate_len(&s);
+//     println!("{}\ncount symbols is {}", s, count_s);
+// }
 
-    println!("View:\nn1 = {}, n2 = {};\nn1 + n2 = {}", data1, data2, result);
-}
+// fn chacnge_str(s: &mut String) {
+//     s.push_str(" Some add to back side string");
+// }
+
+// fn test_links() {
+//     let s1 = String::from("Sup");
+//     let lens = calculate_len(&s1);
+
+//     println!("len of {}, is {}", s1, lens);
+// }
+
+// fn calculate_len(s: &String) -> usize {
+//     s.len()
+// }
+
+
+// fn test_nums() {
+//     let mut inp_val_1 = String::new();
+//     let mut inp_val_2: String = String::new();
+
+//     println!("Enter num1: ");
+//     io::stdin().read_line(&mut inp_val_1).expect("val 1");
+
+//     println!("Enter num2: ");
+//     io::stdin().read_line(&mut inp_val_2).expect("val 2");
+
+//     let data1: i16 = inp_val_1.trim().parse().expect("not valid number");
+//     let data2: i16 = inp_val_2.trim().parse().expect("not correct val");
+
+//     let result = data1 + data2;
+
+//     println!("View:\nn1 = {}, n2 = {};\nn1 + n2 = {}", data1, data2, result);
+// }

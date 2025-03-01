@@ -1,7 +1,14 @@
 // use std::io;
 
-fn main() {
+macro_rules! my_print {
+    ($msg:expr) => {
+        println!("{}", $msg);
+    };
+}
 
+fn main() {
+    let a: i32 = 321;
+    my_print!(a);
 }
 
 // fn funcs() {

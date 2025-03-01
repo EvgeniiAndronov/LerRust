@@ -1,21 +1,45 @@
 // use std::io;
 
 fn main() {
-    add(4, 2);
-    add(3, -23);
 
-    let user = "Name";
-    greet_user(&user);
-} 
-
-fn greet_user(name: &str) {
-    println!("name: {}", name);
 }
 
-fn add(a: i32, b:i32) {
-    let res = a + b;
-    println!("add-{}", res);
-}
+// fn funcs() {
+//     let res1: i32 = add(4, 2);
+//     let res2: i32 = add(3, -23);
+//     println!("{}\n{}", res1, res2);
+
+//     let user: &str = "Name";
+//     greet_user(&user);
+
+//     let mut name_to_change = String::from("Bob");
+//     change_str(&mut name_to_change);
+//     println!("{}", name_to_change);
+
+//     let data = (32, 91);
+//     let res = mult(&data);
+
+//     println!("{}", res);
+// }
+
+
+// fn mult(data: &(i32, i32)) -> i32 {
+//     data.0 * data.1
+// }
+
+// fn change_str(name: &mut String) {
+//     *name = String::from("NewBob");
+// }
+
+// fn greet_user(name: &str) {
+//     println!("name: {}", name);
+// }
+
+// fn add(a: i32, b:i32) -> i32 {
+//     let res = a + b;
+//     return res;
+//     // println!("add-{}", res);
+// }
 
 // fn loops() {
 //     for i in 1..4 {

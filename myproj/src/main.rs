@@ -1,4 +1,5 @@
 // use std::io;
+mod math;
 
 macro_rules! my_print {
     ($msg:expr) => {
@@ -7,9 +8,17 @@ macro_rules! my_print {
 }
 
 fn main() {
-    let a: i32 = 321;
-    my_print!(a);
+    let sum: i32 = math::add(10, 5);
+    my_print!(sum);
+
+    let minus = math::min(10, 5);
+    my_print!(minus);
 }
+
+// fn macros() {
+//     let a: i32 = 321;
+//     my_print!(a);
+// }
 
 // fn funcs() {
 //     let res1: i32 = add(4, 2);

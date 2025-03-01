@@ -1,19 +1,92 @@
 // use std::io;
-mod math;
+use std::collections::HashMap;
 
-macro_rules! my_print {
-    ($msg:expr) => {
-        println!("{}", $msg);
-    };
-}
+// mod math;
+
+// macro_rules! my_print {
+//     ($msg:expr) => {
+//         println!("{}", $msg);
+//     };
+// }
+
+
 
 fn main() {
-    let sum: i32 = math::add(10, 5);
-    my_print!(sum);
 
-    let minus = math::min(10, 5);
-    my_print!(minus);
+
+
 }
+
+fn map() {
+        let mut scores = HashMap::new();
+    scores.insert("name 1", 100);
+    scores.insert("name 2", 200);
+    scores.insert("name 3", 300);
+
+    println!("{:?}", scores);
+
+    println!("Hash.name_1: {}", scores.get("name 1").unwrap());
+
+    scores.remove("name 1");
+    scores.insert("name 4", 400);
+
+    println!("{:?}", scores);
+}
+
+// fn vec_str() {
+//     let mut v: Vec<i32> = Vec::new();
+
+//     v.push(0);
+//     v.push(1);
+//     v.push(2);
+
+//     println!("Vector: {:?}", v);
+
+//     v[0] = -1;
+//     println!("Vector.0: {}", v[0]);
+
+//     let mut v2: Vec<i32> = vec![0, 1, 2, 3, 4];
+//     v2.push(5);
+//     println!("{:?}", v2);
+
+//     match v2.get(8) {
+//         Some(value) => println!("V el {}", value),
+//         None => println!("Error"),
+//     }
+
+//     let v3: Vec<i32> = vec![100, 200, 300];
+    
+//     for ob in &v3 {
+//         println!("{}", ob);
+//         if *ob % 3 == 0 {
+//             println!("added {}", *ob)
+//         }
+//     }
+
+//     let s1 = String::new();
+//     let s2 = String::from("Hi Rust!");
+
+//     println!("{}", s2);
+
+//     let s3 = s1 + &s2;
+
+//     let mut word = String::new();
+//     word.push_str("Hello");
+//     word.push(',');
+//     word.push_str(" World");
+
+//     println!("{}", word);
+
+
+// }
+
+// fn ot() {
+//     let sum: i32 = math::add(10, 5);
+//     my_print!(sum);
+
+//     let minus = math::min(10, 5);
+//     my_print!(minus);
+// }
 
 // fn macros() {
 //     let a: i32 = 321;
